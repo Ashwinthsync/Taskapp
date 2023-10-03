@@ -1,0 +1,18 @@
+body {
+    background-color: lightblue;
+  }
+  
+  #container {
+    background-color: lavender;
+    padding: 12px;
+    margin: 12px;
+    height: 100%;
+  }
+
+  .button{
+    background-color: skyblue;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    
+  }
