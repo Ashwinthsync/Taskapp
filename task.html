@@ -1,37 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Display</title>
-    <link rel="stylesheet" type="text/css" href="task.css">
+    <meta charset="utf-8">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./task.css">
 </head>
 <body>
     <div id="container">
     <form action="" id="inputForm">
+        <h1>APPLICATION FORM</h1>
         <fieldset>
-            <legend><h1>Personal Details : </h1></legend>
-            <label for="name">Name:</label>
+            
+            <legend ><h1>Personal Details : </h1></legend>
+            <label for="name">Name &nbsp:&nbsp</label>
             <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
 
-            <label for="email">Email:</label>
+            <label for="email">Email &nbsp:&nbsp</label>
             <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
 
-            <label for="tel">Mobile No. &nbsp:</label>
+            <label for="tel">Mobile No. &nbsp:&nbsp</label>
             <input type="tel" id="tel" name="tel" required placeholder="Your Mobile no."><br><br>
 
+            <label for="dob">Date Of Birth &nbsp:&nbsp</label>
+            <input type="date" id="dob" name="date" value=""><br><br>
 
-            <label for="occupation">Occupation &nbsp:</label>
+
+            <label for="occupation">Occupation &nbsp:&nbsp</label>
             <input id="occupation" name="occupation" required placeholder="Job Position"><br><br>
-            <button class="button" onclick="displayValues()" >DISPLAY</button>
-            
+
+            <div>
+                <label >Gender &nbsp:&nbsp</label>&nbsp;
+                <input type="radio" name="gender" value="Male">
+                <label >Male &nbsp &nbsp</label> 
+                <input type="radio" name="gender" value="Female">
+                <label >Female &nbsp</label>  
+                <input type="radio" name="gender" value="Transgender">
+                <label>Transgender &nbsp &nbsp</label><br><br>
+            </div>
+
+            <div>
+                <label>Martial Status &nbsp:&nbsp</label>
+                <select name="martial" id="martial">
+                    <option value="--">&nbsp --</option>
+                    <option value="Married">Married</option>
+                    <option value="Unmarried">Unmarried</option>
+                    <option value="Divorced">Divorced</option>
+                </select>            
+            </div><br>
+
+
+            <div>
+                <label>Languages &nbsp : &nbsp</label>
+                <input type="checkbox" name="Language" value="English">
+                <label>English &nbsp : &nbsp</label>
+                <input type="checkbox" name="Language" value="Tamil">
+                <label>Tamil &nbsp</label>
+                <input type="checkbox" name="Language" value="Hindi">
+                <label>Hindi &nbsp</label>
+                <input type="checkbox" name="Language" value="French">
+                <label>French &nbsp</label>
+                <input type="checkbox" name="Language" value="Others">
+                <label>Others &nbsp</label>
+            </div><br><br><br>
+
+            <!--<input type="reset" onclick="reset()" class="button" name="reset" value="RESET">-->
+            <button class="button" onclick="displayValues()" >SUBMIT</button>  
+
         </fieldset>
     </form>
     <br>
         <fieldset>
-            <h2>Submitted Values :-</h2>
+            <legend><h1>Submitted Values :</h1></legend><br><br>
             <div id="displayValues"></div>
-            <script src="jquery-3.3.1.js"></script>
-            <script src="task.js"></script>
         </fieldset>
+        <script src="./jquery-3.5.1.js"></script>
+        <script src="task.js"></script>
     </div>
 </body>
 </html>
